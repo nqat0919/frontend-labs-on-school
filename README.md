@@ -12,3 +12,5 @@
 Kiến thức về các ngôn ngữ Front-end gồm [HTML](#), [CSS](#) và [JavaScript](#)
 ## Labs
 1. [Lab 1](https://github.com/nqat0919/frontend-labs-on-school/tree/main/Lab1)
+2. [Lab 2](#)
+3. [Lab 3](#)
