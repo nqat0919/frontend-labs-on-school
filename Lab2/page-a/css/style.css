@@ -189,3 +189,44 @@ h5 {
 .env_st .pix_text {
     color: #76b3fc;
 }
+
+#section_agency_5 .sixteen.columns {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    row-gap: 40px;
+    padding: 50px 0;
+    width: 500px;
+    margin: auto;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    color: #acacac;
+}
+
+.sixteen.columns .f1_style {
+    font-size: 30px;
+    font-weight: 350;
+    color: #609d6c;
+}
+
+.second_link .get_2_btn a:link{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    color: #609d6c;
+    border: 3px solid #609d6c;
+    padding: 15px 30px;
+    border-radius: 3px;
+    transition: ease-out 0.2s;
+}
+
+.second_link .get_2_btn a:link:hover{
+    background-color: #609d6c;
+    color: white;
+}
+
+.pixfort_st {
+    color: #609d6c;
+    font-weight: bold;
+}
