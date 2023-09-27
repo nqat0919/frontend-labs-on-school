@@ -5,7 +5,8 @@
 }
 
 :root {
-    --default-width: 1000px
+    --default-width: 1000px;
+    --gray: #f8f4f4;
 }
 
 body {
@@ -17,7 +18,7 @@ body {
 #section_text_2 {
     display: flex;
     justify-content: center;
-    background-color: #f8f4f4;
+    background-color: var(--gray);
     padding: 20px 0;
 }
 
@@ -44,7 +45,7 @@ body {
 
 /* Section header */
 #section_header_1 {
-    background-color: #ffffff;
+    background-color: white;
     display: flex;
     justify-content: center;
     padding: 20px 0;
@@ -67,7 +68,7 @@ body {
     text-decoration: none;
     font-weight: bold;
     display: inline-block;
-    transition: ease-in-out 0.2s;
+    transition: ease-in-out 0.2heads;
 }
 
 #section_header_1 nav a:link:hover {
@@ -92,4 +93,112 @@ nav .containerss ul{
 .containerss #navbar-collapse-02 {
     display: flex;
     align-items: center;
+}
+
+/* Section slider */
+#section_slider {
+    background-color: var(--gray);
+    display: flex;
+    justify-content: center;
+    padding: 60px 0;
+}
+
+#section_slider .carousel-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    position: relative;
+}
+
+#section_slider #myCarousel {
+    width: var(--default-width);
+    overflow-x: hidden;
+    position: relative;
+}
+
+#myCarousel .carousel-inner .item {
+    width: var(--default-width);
+    position: relative;
+}
+
+#myCarousel .carousel-inner .item::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    /* background-color: #f77825; */
+    box-shadow: inset 0px -70px 60px 5px rgba(0,0,0,0.9)
+}
+
+#myCarousel .carousel-inner .item img {
+    width: 100%;
+    display: block;
+    position: relative;
+}
+
+#myCarousel .carousel-inner .carousel-caption {
+    bottom: 30px;
+    left: 40px;
+    position: absolute;
+    color: white;
+    z-index: 1;
+}
+
+#myCarousel .carousel-indicators {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    color: #2b2a2a;
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+#myCarousel .carousel-indicators .active{
+    color: white;
+}
+
+#myCarousel a:link {
+    position: absolute;
+    top: 50%;
+    text-decoration: none;
+}
+
+#myCarousel a.right:link {
+    right: 10px;
+}
+
+#myCarousel a.left:link {
+    left: 10px;
+}
+
+#myCarousel .fui-arrow-right::before {
+    font-family: 'Font Awesome 6 Free';
+    content: "\f138";
+    font-weight: 900;
+    font-size: 50px;
+    color: #ffffffb4;
+    position: absolute;
+    top: 0;
+    left: -50px;
+    transform: translateY(-50%);
+}
+
+#myCarousel .carousel-control:hover::before {
+    color: white;
+}
+
+#myCarousel .fui-arrow-left::before {
+    font-family: 'Font Awesome 6 Free';
+    content: "\f137";
+    font-weight: 900;
+    font-size: 50px;
+    color: #ffffffb4;
+    position: absolute;
+    top: 0;
+    right: -50px;
+    transform: translateY(-50%);
 }
