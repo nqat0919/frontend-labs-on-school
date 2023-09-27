@@ -7,6 +7,7 @@
 :root {
     --default-width: 1000px;
     --gray: #f8f4f4;
+    --gray-text: #7f7f7f;
 }
 
 body {
@@ -60,11 +61,11 @@ body {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
-    color: #7f7f7f;
+    color: var(--gray-text);
 }
 
 #section_header_1 nav a:link {
-    color: #7f7f7f;
+    color: var(--gray-text);
     text-decoration: none;
     font-weight: bold;
     display: inline-block;
@@ -201,4 +202,52 @@ nav .containerss ul{
     top: 0;
     right: -50px;
     transform: translateY(-50%);
+}
+
+#section_gym_4 {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    padding: 70px 0;
+}
+
+#section_gym_4 .top_padding {
+    display: flex;
+    justify-content: center;
+    width: var(--default-width);
+    gap: 120px;
+}
+
+#section_gym_4 .one-third {
+    text-align: center;
+    flex-grow: 0;
+    width: 200px;
+}
+
+.one-third .img_gym_st img {
+    border-radius: 50%;
+}
+
+.one-third .text_gym_style {
+    margin: 20px 0;
+}
+
+.one-third .gym_st {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.one-third .gym_text {
+    font-size: 15px;
+    color: var(--gray-text);
+    margin-top: 15px;
+}
+
+.one-third .link_3_btn a:link {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #f77825;
+    border-radius: 5px;
+    color: white;
 }
