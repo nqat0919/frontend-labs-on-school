@@ -66,31 +66,40 @@ body {
     color: var(--gray-text);
 }
 
-#section_header_1 nav a:link {
+a.pi:link {
     color: var(--gray-text);
     text-decoration: none;
     font-weight: bold;
     display: inline-block;
-    transition: ease-in-out 0.2heads;
+    transition: ease-in-out 0.2s;
+    font-size: 20px;
 }
 
-#section_header_1 nav a:link:hover {
+a.pi:link:hover {
     color: var(--orange);
 }
 
-nav .containerss ul{
+.containerss ul.navbar-left {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+.containerss ul.navbar-left a:link{
+    text-decoration: none;
+    color: var(--gray-text);
+    font-weight: bold;
+}
+
+.containerss ul.navbar-left a:link:hover{
+    color: var(--orange);
+}
+
+ul.bottom-icons {
+    gap: 20px;
     list-style: none;
     display: flex;
     align-items: center;
-}
-
-.containerss ul.navbar-left {
-    gap: 40px;
-}
-
-.containerss ul.navbar-right {
-    font-size: 25px;
-    gap: 20px;
 }
 
 .containerss #navbar-collapse-02 {
@@ -161,6 +170,10 @@ nav .containerss ul{
 }
 
 #myCarousel .carousel-indicators .active{
+    color: white;
+}
+
+#myCarousel .carousel-indicators li:hover{
     color: white;
 }
 
@@ -318,4 +331,114 @@ nav .containerss ul{
 
 #section_intro_title .one-third .btn_normal:link.orange_bg {
     background-color: var(--orange);
+}
+
+#hidden_pix_15 {
+    display: none;
+}
+
+#section_party_3 {
+    display: flex;
+    justify-content: center;
+    background-color: #191919;
+    padding-top: 50px;
+    padding-bottom: 90px;
+}
+
+#section_party_3 .container {
+    box-sizing: content-box;
+    width: 400px;
+    text-align: center;
+    background-color: #151515;
+    padding: 30px 40px;
+    border: 1px solid #272727;
+}
+
+#section_party_3 .container .text_input .headtext_style {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 22px;
+}
+
+#section_party_3 .container .text_input .subtext_style {
+    color: var(--gray-text);
+    width: 300px;
+    margin: 0 auto;
+}
+
+#section_party_3 .container .text_input .segment {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+#section_party_3 .container .text_input .segment::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 5px;
+    background-color: #1c8ff5;
+}
+
+#section_party_3 #contact_form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+#section_party_3 #contact_form input{
+    border: none;
+    padding: 15px 0;
+    border-radius: 3px;
+    display: block;
+}
+
+#section_party_3 #contact_form input::placeholder{
+    padding-left: 10px;
+}
+
+#section_party_3 #contact_form #submit_btn_15 {
+    padding: 15px 0;
+    border-radius: 3px;
+    font-weight: bold;
+    color: white;
+    border: 0;
+    cursor: pointer;
+    background-image: linear-gradient(#3ca4ff, #2f2cff);
+    transition: ease-out 0.2s;
+}
+
+#section_party_3 #contact_form #submit_btn_15:hover {
+    color: black;
+    transform: scale(1.02);
+    background-image: linear-gradient(#3ca4ff, #0300ab);
+}
+
+/* Section Footer */
+#section_party_4 {
+    display: flex;
+    justify-content: center;
+    background-color: #151515;
+    padding: 20px 0;
+}
+
+#section_party_4 .container .sixteen.columns {
+    display: flex;
+    width: var(--default-width);
+    justify-content: space-between;
+    color: var(--gray-text);
+}
+
+.container .sixteen.columns .socbuttons {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 20px;
+}
+
+.pixfort_st {
+    font-weight: bold;
+    color: #3ca4ff;
 }
