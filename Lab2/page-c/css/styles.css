@@ -1,0 +1,147 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --default-width: 1200px;
+    --dark-bg : #333333;
+    --yellow: #ffcc33;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+}
+
+/* Section header */
+#section_header_2_dark {
+    display: flex;
+    justify-content: center;
+    background-color: #333333;
+    padding: 20px 0;
+}
+
+#section_header_2_dark nav {
+    width: var(--default-width);
+
+}
+
+/* Nav */
+#section_header_2_dark nav .containerss {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Nav-right */
+#section_header_2_dark nav #navbar-collapse-02 ul{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+#navbar-collapse-02 ul a:link {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    color: #cccccc;
+}
+
+#navbar-collapse-02 ul a:link:hover {
+    color: var(--yellow);
+}
+
+#navbar-collapse-02 ul li .text_span{
+    font-weight: 600;
+    color: var(--yellow);
+    font-size: 18px;
+}
+
+/* Section video */
+#section_pix_4 .has-video {
+    position: relative;
+}
+
+#section_pix_4 .has-video .section_video {
+    width: 100%;
+    max-width: 1900px;
+    position: relative;
+    overflow: hidden;
+}
+
+#section_pix_4 .section_video::before {
+    content: "";
+    top: -3px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.567);
+    position: absolute;
+}
+
+#section_pix_4 video {
+    object-fit: fill;
+    width: 100%;
+    height: 700px;
+}
+
+#section_pix_4 .section_wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+#section_pix_4 .section_wrapper .context_style {
+    display: grid;
+    grid-template-columns: 600px;
+    gap: 20px;
+}
+
+#section_pix_4 .section_wrapper .title_style{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+#section_pix_4 .section_wrapper .subtitle_style{
+    font-size: 18px;
+}
+
+#section_pix_4 #contact_form {
+    display: inline-block;
+    padding: 15px 10px;
+    background-color: rgba(0, 0, 0, 0.704);
+    border-radius: 5px;
+}
+
+#section_pix_4 #contact_form #email {
+    border: 0;
+    padding: 7px 10px;
+    border-radius: 5px;
+    width: 230px;
+    margin-right: 10px;
+}
+
+#section_pix_4 #contact_form #email:focus {
+    border: none;
+}
+
+#section_pix_4 #contact_form #subscribe_btn_1 {
+    padding: 7px 10px;
+    font-weight: bold;
+    color: white;
+    background-color: var(--yellow);
+    border: 0;
+    cursor: pointer;
+    transition: all 0.2s;
+    border-radius: 5px;
+}
+
+#section_pix_4 #contact_form #subscribe_btn_1:hover {
+    color: black;
+    background-color: #ffb700
+}
