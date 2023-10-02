@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Rubik:wght@400;500;600;700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+form {
+    display: grid;
+    width: 700px;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+input, textarea,
+input:focus-visible, textarea:focus-visible {
+    border: 0;
+    outline: none;
+    font-size: 15px;
+}
+
+input, select {
+    background-color: #f7f7f7;
+}
+
+textarea {
+    resize: none;
+}
+
+label {
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.input .field-wrapper {
+    background-color: #f7f7f7;
+}
+
+.field-wrapper {
+    display: flex;
+    flex-direction: column;
+    border: 1px #e1e1e1 solid;
+    padding: 10px 20px 20px;
+    border-radius: 5px;
+    gap: 10px;
+}
+
+.form-title {
+    grid-column: 1/-1;
+    justify-self: center;
+    font-size: 35px;
+    font-weight: 700;
+    color: #333333;;
+}
+
+.field-fullname {
+    grid-column: 1/-1;
+}
+
+.field-email {
+    grid-column: 1/ span 1;
+}
+
+.field-phone {
+    grid-column: 2/ span 1;
+}
+
+.field-services {
+    grid-column: 1/-1;
+}
+
+.field-message {
+    grid-column: 1/-1;
+}
+
+.btn {
+    font-family: 'Poppins', 'FontAwesome';
+    display: block;
+    grid-column: 1/-1;
+    padding: 10px 0;
+    background-color: #333333;
+    border: 0;
+    border-radius: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+.wrapper {
+    position: relative;
+}
+
+.txtService {
+    width: 90%;
+}
+
+.arrow {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.arrow-icon {
+    font-size: 8px;
+    cursor: pointer;
+    color: #333333;
+}
+
+.arrow-icon:hover {
+    color: crimson;
+}
+
+.error {
+    display: flex;
+    color: crimson;
+    grid-column: 2/2;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    transition: ease-in 0.75s;
+}
+
+.success {
+    display: flex;
+    color: #29a300;
+    grid-column: 2/2;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    transition: ease-in 0.75s;
+}
+
+.message {
+    color: #29a300;
+    font-size: 20px;
+}
+
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}

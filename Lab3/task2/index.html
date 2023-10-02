@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Lab 3 Task 2</title>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css' rel='stylesheet'>
+</head>
+<body>
+    <form action="">
+        <p class="form-title">Contact Us</p>
+        <div class="input field-fullname grid-cell">
+            <div class="field-wrapper">
+                <label for="fullname">FULL NAME *</label>
+                <input type="text" name="fullname" placeholder="Enter Your Name">
+            </div>
+        </div>
+        <div class="input field-email grid-cell">
+            <div class="field-wrapper">
+                <label for="email">EMAIL *</label>
+                <input type="text" name="email" placeholder="Enter Your Email">
+            </div>
+        </div>
+        <div class="input field-phone grid-cell">
+            <div class="field-wrapper">
+                <label for="phone">PHONE</label>
+                <input type="text" name="phone" placeholder="Enter Phone Number">
+            </div>
+        </div>
+        </div>
+        <div class="input field-services grid-cell">
+            <div class="field-wrapper">
+                <label for="services">NEEDED SERVICES *</label>
+                <div class="wrapper">
+                    <input type="number" name="service" class="txtService" placeholder="Please choose" min="1" max="10">
+                    <div class="arrow">
+                        <i class="fa-solid fa-chevron-up arrow-icon"></i>
+                        <i class="fa-solid fa-chevron-down arrow-icon"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="field-message grid-cell">
+            <div class="field-wrapper">
+                <label for="message">MESSAGE</label>
+                <textarea name="message" rows="6" placeholder="Your message here..."></textarea>
+            </div>
+        </div>
+        <input type="submit" value="Submit   &#xf061;" class="btn">
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
