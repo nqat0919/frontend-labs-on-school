@@ -128,6 +128,7 @@ label {
     gap: 5px;
     font-size: 12px;
     transition: ease-in 0.75s;
+    padding-left: 20px;
 }
 
 .success {
@@ -138,6 +139,7 @@ label {
     gap: 5px;
     font-size: 12px;
     transition: ease-in 0.75s;
+    padding-left: 20px;
 }
 
 .message {
