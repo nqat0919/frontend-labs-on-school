@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 4 Lab 3</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css' rel='stylesheet'>
+</head>
+<body>
+    <form action="" class="form-content">
+        <!-- Account Section -->
+        <section id="account-section">
+            <p class="section-title">Account</p>
+            <div class="row">
+                <!-- Full name Field -->
+                <div class="icon-field">
+                    <i class="fa-solid fa-user-large"></i>
+                    <input type="text" placeholder="Full Name">
+                </div>
+                <div class="msg error">
+                    <i class="fa-solid fa-user-large-slash"></i>
+                    <p>Cannot find this person</p>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Email Field -->
+                <div class="icon-field">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="text" placeholder="Email Address">
+                </div>
+            </div>
+            <div class="row">
+                <!-- Password Field -->
+                <div class="icon-field">
+                    <i class="fa-solid fa-key"></i>
+                    <input type="password" placeholder="Password">
+                </div>
+            </div>
+        </section>
+
+        <div class="wrapper">
+            <!-- Date of Birth Section -->
+            <section id="dob-section">
+                <p class="section-title">Date of Birth</p>
+                <div class="row">
+                    <div class="icon-field">
+                        <input type="text" placeholder="DD" name="day">
+                    </div>
+                    <div class="msg error">
+                        <i class="fa-regular fa-calendar-xmark"></i>
+                        <p>Invalid</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="icon-field">
+                        <input type="text" placeholder="MM" name="month">
+                    </div>
+                    <div class="msg error">
+                        <i class="fa-regular fa-calendar-xmark"></i>
+                        <p>Invalid</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="icon-field">
+                        <input type="text" placeholder="YYYY" name="year">
+                    </div>
+                    <div class="msg error">
+                        <i class="fa-regular fa-calendar-xmark"></i>
+                        <p>Invalid</p>
+                    </div>
+                </div>
+        </section>
+
+        <!-- Gender Section -->
+        <section id="gender-section">
+            <p class="section-title">Gender</p>
+            <div class="row">
+                <div class="icon-field btn active">
+                    <span>Male</span>
+                </div>
+            </div>
+            <div class="row">     
+                <div class="icon-field btn">
+                    <span>Female</span>
+                </div>
+            </div>
+        </section>
+        </div>
+
+        <!-- Payment Section -->
+        <section id="payment-section">
+            <p class="section-title">Payment Details</p>
+            <div class="row">     
+                <div class="icon-field btn icon--no-border active">
+                    <i class="fa-brands fa-cc-visa"></i>
+                    <span>Credit card</span>
+                </div>
+            </div>
+            <div class="row">     
+                <div class="icon-field btn icon--no-border">
+                    <i class="fa-brands fa-cc-paypal"></i>
+                    <span>Paypal</span>
+                </div>
+            </div>
+            <div class="row grid-full-row">
+                <div class="icon-field">
+                    <i class="fa-regular fa-credit-card"></i>
+                    <input type="text" placeholder="Card Number">
+                </div>
+                <div class="msg error">
+                    <i class="fa-solid fa-credit-card"></i>
+                    <p>Invalid</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="icon-field">
+                    <i class="fa-solid fa-address-card"></i>
+                    <input type="text" placeholder="Card CVC">
+                </div>
+            </div>
+            <div class="row">
+                <div class="select-field">
+                    <div class="icon-field">
+                        <select>
+                            <option value="volvo">1</option>
+                            <option value="saab">2</option>
+                            <option value="opel">3</option>
+                        </select>
+                    </div>
+                    <div class="icon-field">
+                        <select>
+                            <option value="volvo">1</option>
+                            <option value="saab">2</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Term and Conditions Section -->
+        <section id="term-section">
+            <p class="section-title">Term and Conditions</p>
+            <div class="term-field">
+                <input type="checkbox" id="term" name="term" value="true">
+                <label for="term">
+                    <span>I accept the term and coditions for signing up to this service, and hereby confirm I have read the privacy policy.</span> 
+                </label>
+            </div>
+        </section>
+    </form>
+</body>
+</html>

@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Rubik:wght@400;500;600;700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #e2e2e2;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 500px;
+    gap: 30px;
+}
+
+section {
+    row-gap: 10px;
+    display: grid;
+}
+
+.section-title {
+    font-weight: bold;
+    color: #82d528;
+    grid-column: 1/-1;
+}
+
+.row {
+    position: relative;;
+}
+
+.msg {
+    display: flex;
+    font-size: 12px;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    gap: 5px;
+}
+
+.error {
+    color: crimson;
+}
+
+.icon-field {
+    display: flex;
+    align-items: center;
+    border-radius: 3px;
+    font-size: 15px;
+    color: #b8b8b8;
+    background-color: #f9f9f9;
+    padding: 5px 0;
+    border: 1px solid #b8b8b8;
+    gap: 10px;
+    flex: 1;
+    height: 40px;
+}
+
+.icon-field input:focus-visible {
+    outline: none;
+}
+
+.icon-field i {
+    display: inline-block;
+    padding: 5px 10px;
+    border-right: 1px solid #b8b8b8;
+}
+
+.icon-field.icon--no-border {
+    gap: 5px;
+}
+
+.icon-field.icon--no-border i {
+    display: inline-block;
+    padding: 0;
+    border-right: 0;
+    font-size: 20px;
+}
+
+.icon-field input {
+    border: 0;
+    background-color: transparent;
+    width: 100%;
+}
+
+.icon-field select {
+    border: 0;
+    background-color: transparent;
+    width: 100%;
+}
+
+#account-section {
+    grid-template-columns: 1fr;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    align-items: start;
+}
+
+#dob-section {
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10px;
+}
+
+#dob-section input::placeholder {
+    text-align: center;
+}
+
+#dob-section input {
+    text-align: center;
+}
+
+#gender-section {
+    grid-template-columns: 1fr 1fr;
+}
+
+.icon-field.btn {
+    cursor: pointer;
+    justify-content: center;
+}
+
+.icon-field.btn.active {
+    background-color: #7ed321;
+    color: white;
+    border-color: #129f15;
+}
+
+.grid-full-row {
+    grid-column: 1 / -1;
+}
+
+#payment-section {
+    grid-template-columns: 1fr 1fr;
+}
+
+.select-field {
+    display: flex;
+    margin-left: 10px;
+}
+
+.select-field select:focus-visible {
+    outline: none;
+}
+
+#term-section .term-field label span {
+    color: #b8b8b8;
+    font-size: 13px;
+}
+
+#term-section .term-field input[type="checkbox"] {
+    vertical-align: middle;
+}
