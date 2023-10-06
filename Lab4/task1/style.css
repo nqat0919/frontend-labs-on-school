@@ -1,0 +1,30 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+main {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(4, 1fr);
+    width: 500px;
+    height: 500px;
+    background-color: #66696d;
+    padding: 20px;
+}
+
+button.btn {
+    cursor: pointer;
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 10px;
+}
