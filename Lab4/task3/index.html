@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3 Lab 4</title>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Rubik:wght@400;500;600;700&display=swap');
+    * {
+        padding: 0;
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 500px;
+        background-color: #e9ecef;
+    }
+    </style>
+</head>
+<body>
+    
+    <script type="module">
+        import {GREET} from './greet.js'
+        const r = Math.trunc(Math.random() * GREET.length - 1) + 1;
+        document.querySelector('body').insertAdjacentHTML('afterbegin', `<p>${GREET[r]}<p>`);
+    </script>
+</body>
+</html>

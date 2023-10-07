@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2 Lab 4</title>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Rubik:wght@400;500;600;700&display=swap');
+    * {
+        padding: 0;
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    form {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        background-color: #e9ecef;
+        border: solid 2px #212529;
+        border-radius: 3px;
+        padding: 20px;
+    }
+
+    p.title {
+        margin-bottom: 20px;
+    }
+
+    .row + .row {
+        margin-top: 10px;
+    }
+
+    input[type="submit"] {
+        margin-top: 30px;
+        padding: 10px 15px;
+        border-radius: 30px;
+        border: 2px solid #212529;
+        cursor: pointer;
+        transition: all 0.2s;
+    }
+    
+    input[type="submit"]:hover {
+        background-color: #212529;
+        color: white;
+    }
+
+    .result {
+        color: #f03e3e;
+    }
+    </style>
+</head>
+<body>
+    <form action="">
+        <p class="title">Giải phương trình <span>ax<sup>2</sup> + bx + c = 0 (a # 0)</span></p>
+        <div class="row">
+            <label for="a">a:</label>
+            <input type="text" id="a">
+        </div>
+        <div class="row">
+            <label for="b">b:</label>
+            <input type="text" id="b">
+        </div>
+        <div class="row">
+            <label for="c">c:</label>
+            <input type="text" id="c">
+        </div>
+        <input type="submit" value="calculate">
+    </form>
+    <script>
+        let a, b, c = 0;
+        const btn = document.querySelector('input[type="submit"]');
+        const PTB2 = {
+            delta: (a, b, c) => Math.pow(b, 2) - 4 * a * c,
+            calc(a, b, c) {
+                this.del = this.delta(a, b, c);
+                if (this.del === 0) {
+                    this.x1 = -b / 2 * a;
+                    this.x2 = -b / 2 * a;
+                }
+                else if (this.del > 0) {
+                    this.x1 = (-b + Math.sqrt(this.del)) / 2;
+                    this.x2 = (-b + Math.sqrt(this.del)) / 2;
+                }
+            }
+        }
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            a = Number.parseInt(document.getElementById('a').value) || 0;
+            b = Number.parseInt(document.getElementById('b').value) || 0;
+            c = Number.parseInt(document.getElementById('c').value) || 0;
+            if (a && b && c) {
+                PTB2.calc(a, b, c);
+                document.querySelector('.result')?.remove();
+                const html = `
+                <div class="result">
+                    <p>Result: Δ = ${PTB2.del}, x<sub>1</sub> = ${PTB2.del >= 0 ? PTB2.x1 : 'invalid'}, x<sub>2</sub> = ${PTB2.del >= 0 ? PTB2.x2 : 'invalid'}</p>
+                </div>
+                `
+                btn.insertAdjacentHTML('afterend', html);
+            }
+        })
+    </script>
+</body>
+</html>

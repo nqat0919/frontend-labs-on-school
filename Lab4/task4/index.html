@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 4 Lab 4</title>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Rubik:wght@400;500;600;700&display=swap');
+    * {
+        padding: 0;
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 800px;
+        background-color: #e9ecef;
+    }
+
+    form {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    textarea {
+        resize: none;
+    }
+
+    span {
+        background-color: #ffd43b;
+    }
+    </style>
+</head>
+<body>
+    <form action="">
+        <textarea class="area" cols="30" rows="10">
+        </textarea>
+        <input type="text" class="txt">
+        <input type="submit" value="check" class="btn">
+    </form>
+    <script>
+        const input = document.querySelector('.txt');
+        const area = document.querySelector('.area');
+        const btn = document.querySelector('.btn');
+        btn.addEventListener('click', e => {
+            e.preventDefault();
+            const str = input.value;
+            let i = 0;
+            let stored = '';
+            const arr = [];
+            [...area.value].forEach((char) => {
+                if (char === str[i++ % str.length]) 
+                    stored += char;
+                else {
+                    stored = '';
+                    i = 0;
+                }
+                if (stored === str)  {
+                    arr.push(stored); 
+                    stored = '';
+                }
+            })
+            const num = arr.length;
+            document.querySelector('#result')?.remove();
+            btn.insertAdjacentHTML('afterend', `<p id="result">Having ${num} of '${str}' in text area.</p>`)
+        })
+    </script>
+</body>
+</html>
