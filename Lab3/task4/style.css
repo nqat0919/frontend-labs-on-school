@@ -50,7 +50,19 @@ section {
 }
 
 .error {
-    color: crimson;
+    font-size: 12px;
+    color: #f03e3e;
+    position: relative;
+    padding-left: 15px;
+}
+
+.error::after {
+    font-family: 'Font Awesome 6 Free';
+    content: "\f071";
+    position: absolute;
+    top: 3.5px;
+    left: 0;
+    font-weight: bold;
 }
 
 .icon-field {

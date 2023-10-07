@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task 4 Lab 3</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css' rel='stylesheet'>
 </head>
 <body>
-    <form action="" class="form-content">
+    <form action="" class="form-content" id="form-payment">
         <!-- Account Section -->
         <section id="account-section">
             <p class="section-title">Account</p>
@@ -16,25 +17,21 @@
                 <!-- Full name Field -->
                 <div class="icon-field">
                     <i class="fa-solid fa-user-large"></i>
-                    <input type="text" placeholder="Full Name">
-                </div>
-                <div class="msg error">
-                    <i class="fa-solid fa-user-large-slash"></i>
-                    <p>Cannot find this person</p>
+                    <input type="text" placeholder="Full Name" id="txt-fullname">
                 </div>
             </div>
             <div class="row">
                 <!-- Email Field -->
                 <div class="icon-field">
                     <i class="fa-solid fa-envelope"></i>
-                    <input type="text" placeholder="Email Address">
+                    <input type="text" placeholder="Email Address" id="txt-email">
                 </div>
             </div>
             <div class="row">
                 <!-- Password Field -->
                 <div class="icon-field">
                     <i class="fa-solid fa-key"></i>
-                    <input type="password" placeholder="Password">
+                    <input type="password" placeholder="Password" id="txt-password">
                 </div>
             </div>
         </section>
@@ -45,29 +42,17 @@
                 <p class="section-title">Date of Birth</p>
                 <div class="row">
                     <div class="icon-field">
-                        <input type="text" placeholder="DD" name="day">
-                    </div>
-                    <div class="msg error">
-                        <i class="fa-regular fa-calendar-xmark"></i>
-                        <p>Invalid</p>
+                        <input type="text" placeholder="DD" name="day" maxlength="2" id="txt-day">
                     </div>
                 </div>
                 <div class="row">
                     <div class="icon-field">
-                        <input type="text" placeholder="MM" name="month">
-                    </div>
-                    <div class="msg error">
-                        <i class="fa-regular fa-calendar-xmark"></i>
-                        <p>Invalid</p>
+                        <input type="text" placeholder="MM" name="month" maxlength="2" id="txt-month">
                     </div>
                 </div>
                 <div class="row">
                     <div class="icon-field">
-                        <input type="text" placeholder="YYYY" name="year">
-                    </div>
-                    <div class="msg error">
-                        <i class="fa-regular fa-calendar-xmark"></i>
-                        <p>Invalid</p>
+                        <input type="text" placeholder="YYYY" name="year" maxlength="4" id="txt-year">
                     </div>
                 </div>
         </section>
@@ -106,32 +91,35 @@
             <div class="row grid-full-row">
                 <div class="icon-field">
                     <i class="fa-regular fa-credit-card"></i>
-                    <input type="text" placeholder="Card Number">
-                </div>
-                <div class="msg error">
-                    <i class="fa-solid fa-credit-card"></i>
-                    <p>Invalid</p>
+                    <input type="text" placeholder="Card Number" id="txt-card-number" maxlength="16">
                 </div>
             </div>
             <div class="row">
                 <div class="icon-field">
                     <i class="fa-solid fa-address-card"></i>
-                    <input type="text" placeholder="Card CVC">
+                    <input type="text" placeholder="Card CVC" id="txt-card-cvc" maxlength="4">
                 </div>
             </div>
             <div class="row">
                 <div class="select-field">
                     <div class="icon-field">
                         <select>
-                            <option value="volvo">1</option>
-                            <option value="saab">2</option>
-                            <option value="opel">3</option>
+                            <option>01 Jan</option>
+                            <option>02 Jan</option>
+                            <option>03 Jan</option>
                         </select>
                     </div>
                     <div class="icon-field">
                         <select>
-                            <option value="volvo">1</option>
-                            <option value="saab">2</option>
+                            <option>2015</option>
+                            <option>2016</option>
+                            <option>2017</option>
+                            <option>2018</option>
+                            <option>2019</option>
+                            <option>2020</option>
+                            <option>2021</option>
+                            <option>2022</option>
+                            <option>2023</option>
                         </select>
                     </div>
                 </div>
@@ -149,5 +137,7 @@
             </div>
         </section>
     </form>
+
+    <script src="../../Lab4/task6/script3.js"></script>
 </body>
 </html>

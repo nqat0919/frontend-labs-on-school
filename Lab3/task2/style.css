@@ -18,6 +18,7 @@ form {
     width: 700px;
     grid-template-columns: 1fr 1fr;
     gap: 15px;
+    transition: all 0.3s;
 }
 
 input, textarea,
@@ -38,6 +39,10 @@ textarea {
 label {
     font-size: 10px;
     font-weight: bold;
+}
+
+.input {
+    transition: all 0.3s;
 }
 
 .input .field-wrapper {
@@ -121,13 +126,10 @@ label {
 }
 
 .error {
-    display: flex;
+    display: none;
     color: crimson;
-    grid-column: 2/2;
     align-items: center;
-    gap: 5px;
     font-size: 12px;
-    transition: ease-in 0.75s;
     padding-left: 20px;
 }
 
@@ -145,8 +147,8 @@ label {
 .message {
     color: #29a300;
     font-size: 20px;
+    display: none;
 }
-
 
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button {
