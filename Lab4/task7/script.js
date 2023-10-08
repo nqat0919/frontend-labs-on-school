@@ -21,7 +21,7 @@ class Rect {
     }
 }
 
-for (let i  = 1; i <= 250; i++) {
+for (let i  = 1; i <= 100; i++) {
     const body_height = $('.container').height();
     const body_width = $('.container').width();
     let top = getRandom(body_height - size);
