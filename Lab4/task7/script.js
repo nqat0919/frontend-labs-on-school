@@ -2,6 +2,8 @@
 const coords = [];
 const size = Number.parseInt($(':root').css('--size'));
 let targetID = 1;
+let timer = 10;
+
 class Rect {
     constructor(x1, y1, x2, y2, name) {
         this.x1 = x1;
@@ -45,10 +47,11 @@ for (let i  = 1; i <= 100; i++) {
 }
 $('.container').on('click', '.btn', function() {
     // console.log($(this).data('button-id'))
-    if ($(this).data('button-id') == targetID) 
-        $(this).remove() && $('.target span').text(++targetID);
+    if ($(this).data('button-id') == targetID) {
+        $(this).remove() && $('.target span').text(++targetID) && timerObj.reset();
+    }
     else
-        $('.container').append(`<div class="game-over"><span>GAME OVER</span></div>`);
+        $('.container').append(`<div class="game-over"><span>GAME OVER</span></div>`) && timerObj.stop();
 })
 
 function getRandom(max) {
@@ -58,4 +61,34 @@ function getRandom(max) {
 function getRandomColor() {
     return "#" + ((1 << 24) * Math.random() | 0).toString(16).padStart(6, "0");
 }
-  
+
+class Timer {
+    start() {
+        timer = 10;
+        $('.timer span').text(timer)
+        this.x = setInterval(() => {
+            if (timer == 0) {
+                console.log(timer)
+                $('.timer span').text('Time out!')
+                this.stop();
+                $('.container').append(`<div class="game-over"><span>GAME OVER</span></div>`);
+                return;
+            }
+            timer--;
+            $('.timer span').text(`${timer}`)
+        }, 1000);
+        return this;
+    }
+    stop() {
+        if (this.x) {
+            clearInterval(this.x);
+            this.x = undefined;
+        }
+        return this;
+    }
+    reset() {
+        return this.stop().start();
+    }
+}
+const timerObj = new Timer();
+timerObj.start();
